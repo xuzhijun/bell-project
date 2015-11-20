@@ -24,7 +24,7 @@ module.exports = function(grunt) {
                 },
                 files: [
                     'html/*.*',
-                    'styles/style.css',
+                    'styles/main.min.css',
                     'scripts/main.min.js',
                     'img/{,*/}*'
                 ]
@@ -83,15 +83,15 @@ module.exports = function(grunt) {
         jshint: {
             files: ['scripts/main.js']
         },
-        concat: {
-            options: {
-                separator: ';'
-            },
-            plugins: {
-                src: ['libs/*.js'],
-                dest: 'scripts/libs.js'
-            }
-        },
+        //concat: {
+        //    options: {
+        //        separator: ';'
+        //    },
+        //    plugins: {
+        //        src: ['libs/*.js'],
+        //        dest: 'scripts/libs.js'
+        //    }
+        //},
         babel: {
             options: {
                 sourceMap: true
@@ -108,18 +108,18 @@ module.exports = function(grunt) {
                     'scripts/main.min.js': ['scripts/main.es5.js']
                 }
             }
-        },
-        //about images
-        imagemin: {
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: 'images',
-                    src: '{,*/}*.{png,jpg,jpeg,gif}',
-                    dest: 'images'
-                }]
-            }
         }
+        //,
+        //imagemin: {
+        //    dist: {
+        //        files: [{
+        //            expand: true,
+        //            cwd: 'images/',
+        //            src: ['**/*.{png,jpg,gif}'],
+        //            dest: 'images/'
+        //        }]
+        //    }
+        //}
     });
     grunt.registerTask('style', [
         'sass',
@@ -128,13 +128,13 @@ module.exports = function(grunt) {
     ]),
     grunt.registerTask('script', [
         'jshint',
-        //'concat',
+        //'concat'
         'babel',
         'uglify'
     ]),
     grunt.registerTask('build', [
         'style',
-        'uglify'
+        'script'
     ]);
 
     grunt.registerTask('default', [

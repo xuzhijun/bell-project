@@ -1,6 +1,6 @@
 {
-  "name": "bell's project",
-  "version": "0.1.0",
+  "name": "kumobell",
+  "version": "0.0.0",
   "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.5",
