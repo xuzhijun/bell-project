@@ -1,0 +1,13 @@
+{
+  "name": "kumobell",
+  "version": "0.0.0",
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery": "1"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "jquery": "1",
+    "html5shiv": "~3.7.3"
+  }
+}
