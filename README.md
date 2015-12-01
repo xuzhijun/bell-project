@@ -1,17 +1,31 @@
 # bell-project
-###项目初始化
 
-###目录树结构:
+## 项目初始化
+
+### 目录树结构:
 
 * |____images // 图片
-* |____styles // build后的css和scss
-* | |____fonts // 字体
-* | |____scss // scss
 * |____libs // js库
-* |____scripts // js
+* |____scripts // js文件
+* |____styles
+* | |____fonts // 字体
+* | |____scss // scss文件
 * |____.gitignore
-* |____package.json
-* |____bower.json
+* |____bower.json // 作为libs文件夹的备用
 * |____Gruntfile.js
 * |____index.html // 首页
+* |____package.json
 * |____README.md
+
+### 压缩图片使用tinypng在线压缩.
+
+## grunt 任务
+
+### grunt watch
+
+### grunt style
+* 编译 main.scss 为 main.css
+* 给 main.css 添加前缀
+* 把 main.css 压缩为 css
+
+### grunt script
